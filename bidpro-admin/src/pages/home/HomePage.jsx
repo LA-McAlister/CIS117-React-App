@@ -8,7 +8,7 @@ export const HomePage = () => {
       <ul>
         <li>
           <Link to="/american-airlines/bidtypes">
-            American Airlines - BidTypes{" "}
+            American Airlines - BidTypes
           </Link>
         </li>
         <li>
