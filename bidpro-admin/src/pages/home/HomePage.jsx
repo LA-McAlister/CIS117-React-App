@@ -18,6 +18,9 @@ export const HomePage = () => {
           <Link to="/alaska-airlines/bidtypes">Alaska Airlines - BidTypes</Link>
         </li>
         <li>
+          <Link to="/alaska-airlines/pilots">Alaska Airlines - Pilots</Link>
+        </li>
+        <li>
           <Link to="/frontier-airlines/bidtypes">
             Frontier Airlines - BidTypes
           </Link>
