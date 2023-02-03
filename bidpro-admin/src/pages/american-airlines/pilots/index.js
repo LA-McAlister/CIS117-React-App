@@ -1,3 +1,3 @@
-import { AABidPilots } from "./AAPilots";
+import { AAPilots } from "./AAPilots";
 
-export default AABidPilots;
+export default AAPilots;
