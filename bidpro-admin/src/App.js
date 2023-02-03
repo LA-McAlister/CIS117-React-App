@@ -5,6 +5,7 @@ import FABidTypes from "./pages/frontier-airlines/bidtypes";
 import UPBidTypes from "./pages/ups/bidtypes";
 
 import { Routes, Route } from "react-router-dom";
+import { AAPilots } from "./pages/american-airlines/pilots/AAPilots";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/american-airlines/bidtypes" element={<AABidTypes />} />
+        <Route path="/american-airlines/pilots" element={<AAPilots />} />
         <Route path="/alaska-airlines/bidtypes" element={<ASBidTypes />} />
         <Route path="/frontier-airlines/bidtypes" element={<FABidTypes />} />
         <Route path="/ups/bidtypes" element={<UPBidTypes />} />
