@@ -26,6 +26,9 @@ export const HomePage = () => {
           </Link>
         </li>
         <li>
+          <Link to="/frontier-airlines/pilots">Frontier Airlines - Pilots</Link>
+        </li>
+        <li>
           <Link to="/ups/bidtypes">UPS - BidTypes</Link>
         </li>
       </ul>
