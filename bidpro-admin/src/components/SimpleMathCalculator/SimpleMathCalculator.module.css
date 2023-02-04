@@ -1,16 +1,21 @@
-.evenColor{
-    color: blue
+.yesWarning{
+    border: 2px red;
 }
 
-.oddColor{
-    color:green 
+.noWarning{
+    border: none;
 }
 
-.px-2 {
-    padding-left:  5.0 ;
-    padding-right: .0 ;
-  }
-  
-  .mt-0 {
-  margin-top: 0 !important;
+.noOutline{
+  background-color: none;
+
 }
+
+.yesOutline {
+    background-color: lightgrey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ 
+   
+}
+

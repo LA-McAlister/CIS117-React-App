@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./SimpleMathCalculator.module.css";
+import styles from "./SimpleMathCalculator.module.css";
 
 export const SimpleMathCalculator = () => {
   const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");
   const [total, setTotal] = useState("");
-
   const [operator, setOperator] = useState("+");
+  const [emptyNum1, setEmptyNum1] = useState(true);
+  const [emptyNum2, setEmptyNum2] = useState(true);
+  const [jumbotron, setJumbotron] = useState("");
   const [description, setDescription] = useState("");
 
   /**
@@ -33,6 +34,8 @@ export const SimpleMathCalculator = () => {
     if (operator === "%") {
       setTotal(numberOne % numberTwo);
     }
+    setJumbotron(calculate === true);
+
     setDescription(
       "The answer to " + numberOne + " " + operator + " " + numberTwo
     );
@@ -44,6 +47,8 @@ export const SimpleMathCalculator = () => {
     setTotal("");
     setOperator("+");
     setDescription("");
+    setEmptyNum1("");
+    setEmptyNum2("");
   };
 
   /**
@@ -52,69 +57,81 @@ export const SimpleMathCalculator = () => {
 
   return (
     <>
-      <div className="d-flex flex-wrap">
-        <div className="row">
-          <div className="col-4">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="First Number"
-              value={num1}
-              onChange={(e) => setNum1(e.target.value)}
-            />
+      <div className="container">
+        <div className="flex-fill flex-wrap">
+          <div className="row">
+            <div className="col-4">
+              <div className={emptyNum1 ? styles.noWarning : styles.yesWarning}>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="First Number"
+                  value={num1}
+                  onChange={(e) => setNum1(e.target.value)}
+                />
+              </div>
+            </div>
+
+            <div className="col-4">
+              <select
+                className="form-select"
+                value={operator}
+                onChange={(e) => setOperator(e.target.value)}
+              >
+                <option value="+">Addition (+)</option>
+                <option value="-">Subtraction (-)</option>
+                <option value="*">Multiplication (*)</option>
+                <option value="/">Division (/)</option>
+                <option value="%">Remainder (%)</option>
+              </select>
+            </div>
+
+            <div className="col-4">
+              <input
+                type="text"
+                className="form-control"
+                {...(emptyNum2 ? styles.redOutline : "")}
+                placeholder="Second Number"
+                value={num2}
+                onChange={(e) => setNum2(e.target.value)}
+              />
+            </div>
           </div>
 
-          <div className="col-4">
-            <select
-              className="form-select"
-              value={operator}
-              onChange={(e) => setOperator(e.target.value)}
-            >
-              <option value="+">Addition (+)</option>
-              <option value="-">Subtraction (-)</option>
-              <option value="*">Multiplication (*)</option>
-              <option value="/">Division (/)</option>
-              <option value="%">Remainder (%)</option>
-            </select>
-          </div>
-
-          <div className="col-4">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Second Number"
-              value={num2}
-              onChange={(e) => setNum2(e.target.value)}
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="px-5">
-        <div className="px-5">
           <div className="px-5">
-            <div className="d-flex flex-wrap px-4">
-              <div className="d-flex justify-content-center px-5 pt-3 mr-2">
-                <button className="btn btn-primary px-4" onClick={calculate}>
-                  Calculate
-                </button>{" "}
-                <button className="btn btn-danger px-4" onClick={clear}>
-                  Clear{" "}
-                </button>
+            <div className="px-5">
+              <div className="px-5">
+                <div className="d-flex flex-wrap px-4">
+                  <div className="d-flex justify-content-center px-5 pt-3 mr-2">
+                    <button
+                      className="btn btn-primary px-4"
+                      onClick={calculate}
+                    >
+                      Calculate
+                    </button>{" "}
+                    <button className="btn btn-danger px-4" onClick={clear}>
+                      Clear{" "}
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div className="d-flex flex-wrap justify-content-center">
-        <div className="display-2 pt-5 pr-5">
-          <p>{total}</p>
-        </div>
-      </div>
-      <div className="d-flex flex-wrap justify-content-center">
-        <div className="display-2 pt-5 pr-5">
-          <p>{description}</p>
+          <div className={jumbotron ? styles.noOutline : styles.yesOutline}>
+            <div className="px-5">
+              <div className="px-5">
+                <div className="px-5">
+                  <div className="display-3 px-5 justify-content-center">
+                    <p className="px-5 ">{total}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="display-4 justify-content-center px-2">
+              <p className="px-5">{description}</p>
+            </div>
+          </div>
         </div>
       </div>
     </>
