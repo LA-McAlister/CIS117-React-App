@@ -1,0 +1,21 @@
+.yesWarning{
+    border: 2px red;
+}
+
+.noWarning{
+    border: none;
+}
+
+.noOutline{
+  background-color: none;
+
+}
+
+.yesOutline {
+    background-color: lightgrey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ 
+   
+}
+
