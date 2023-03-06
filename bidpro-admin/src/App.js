@@ -6,6 +6,7 @@ import ASPilots from "./pages/alaska-airlines/pilots";
 import FABidTypes from "./pages/frontier-airlines/bidtypes";
 import FAPilots from "./pages/frontier-airlines/pilots";
 import UPBidTypes from "./pages/ups/bidtypes";
+import Forms from "./pages/examples/forms";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/frontier-airlines/bidtypes" element={<FABidTypes />} />
         <Route path="/frontier-airlines/pilots" element={<FAPilots />} />
         <Route path="/ups/bidtypes" element={<UPBidTypes />} />
+        <Route path="/example/forms" element={<Forms />} />
       </Routes>
     </>
   );
