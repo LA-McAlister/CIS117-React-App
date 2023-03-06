@@ -32,6 +32,12 @@ export const HomePage = () => {
           <Link to="/ups/bidtypes">UPS - BidTypes</Link>
         </li>
       </ul>
+      <h2>Examples</h2>
+      <ul>
+        <li>
+          <Link to="/example/forms">Forms</Link>
+        </li>
+      </ul>
     </div>
   );
 };
