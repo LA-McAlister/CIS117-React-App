@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ContactInput from "../../../components/ConactInput";
+//import ContactInput from "../../../components/ConactInput";
+import ContactValidationInput from "../../../components/ContactValidationInput";
 import ContactOutput from "../../../components/ContactOutput";
 
 export const Forms = () => {
@@ -20,7 +21,7 @@ export const Forms = () => {
   return (
     <div className="container">
       <h1>Forms Example</h1>
-      <ContactInput addContact={addContact} />
+      <ContactValidationInput addContact={addContact} />
       <ContactOutput contact={contactToDisplay} />
       <Link to="/">Home</Link>
     </div>
