@@ -4,6 +4,7 @@ import { Administration } from "./../../components/Administration/Administration
 import { Version } from "../../components/Version/Version";
 import { Footer } from "../../components/Footer/Footer";
 import { Airline } from "../../components/Airline/Airline";
+import { Jumbotron } from "../../components/Jumbotron/Jumbotron";
 
 /**
  *
@@ -11,33 +12,27 @@ import { Airline } from "../../components/Airline/Airline";
  *
  */
 
-const HomePage = () => (
-  <div>
-    <Header />
-    <div className="jumbotron d-flex align-items-stretch mx-5 pt-2 pb-0">
-      <Administration name="Tom Jones" />
-      <Version current="1.0.0" />
+const HomePage = () => {
+  return (
+    <div className="container">
+      <Jumbotron
+        administration={<Administration name="Lillie McAlister" />}
+        version={<Version current="1.1.0" />}
+      />
+      <div className="row">
+        <Airline
+          name={"American Airlines"}
+          path={"/american-airlines/bidtypes"}
+        />
+        <Airline name={"Alaska Airlines"} path={"/alaska-airlines/bidtypes"} />
+        <Airline
+          name={"Frontier Airlines"}
+          path={"/frontier-airlines/bidtypes"}
+        />
+        <Airline name={"UPS"} path={"/ups/bidtypes"} />
+      </div>
     </div>
-    <div className="d-flex mx-5 row justify-content-between">
-      <span className="col-6">
-        <Airline name="American Airlines" path="/american-airlines/bidtypes" />
-      </span>
-      <span className="col-6">
-        <Airline name="Alaska Airlines" path="/alaska-airlines/bidtypes" />
-      </span>
-    </div>
-    <div className="d-flex mx-5 mt-5 row justify-content-between">
-      <span className="col-6">
-        <Airline name="Frontier Airlines" path="/frontier-airlines/bidtypes" />
-      </span>
-      <span className="col-6">
-        <Airline name="UPS" path="/ups/bidtypes" />
-      </span>
-    </div>
-    <footer>
-      <Footer />
-    </footer>
-  </div>
-);
+  );
+};
 
 export default HomePage;
