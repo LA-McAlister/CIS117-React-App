@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 
 export function Version({ current }) {
   return (
-    <div className="col-6 col-lg-4 text-center">
+    <div className="col-sx-6 col-lg-4 text-center">
       <h1 className="display-3">{current}</h1>
       <p className="text-muted">Version</p>
     </div>

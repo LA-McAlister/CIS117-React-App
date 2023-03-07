@@ -6,11 +6,9 @@ import React from "react";
 
 export function Jumbotron({ administration, version }) {
   return (
-    <div className="jumbotron mt-3">
-      <section className="row">
-        {administration}
-        {version}
-      </section>
+    <div className="row jumbotron mt-3">
+      {administration}
+      {version}
     </div>
   );
 }

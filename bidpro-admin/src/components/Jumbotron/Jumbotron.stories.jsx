@@ -8,7 +8,11 @@ export default {
   component: Jumbotron,
 };
 
-const Template = (args) => <Jumbotron {...args} />;
+const Template = (args) => (
+  <div className="container">
+    <Jumbotron {...args} />
+  </div>
+);
 
 export const ExampleWithAdminAndVersion = Template.bind({});
 ExampleWithAdminAndVersion.args = {

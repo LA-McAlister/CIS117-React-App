@@ -9,6 +9,7 @@ import FAPilots from "./pages/frontier-airlines/pilots";
 import UPBidTypes from "./pages/ups/bidtypes";
 import Forms from "./pages/examples/forms";
 import Footer from "./components/Footer";
+import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -17,7 +18,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" component={HomePage} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/american-airlines/bidtypes" element={<AABidTypes />} />
         <Route path="/american-airlines/pilots" element={<AAPilots />} />
         <Route path="/alaska-airlines/bidtypes" element={<ASBidTypes />} />
