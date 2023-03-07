@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import HomePage from "./pages/home/index";
+import HomePage from "./pages/home/HomePage";
 import AABidTypes from "./pages/american-airlines/bidtypes";
 import AAPilots from "./pages/american-airlines/pilots";
 import ASBidTypes from "./pages/alaska-airlines/bidtypes";
@@ -17,7 +17,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" component={HomePage} />
         <Route path="/american-airlines/bidtypes" element={<AABidTypes />} />
         <Route path="/american-airlines/pilots" element={<AAPilots />} />
         <Route path="/alaska-airlines/bidtypes" element={<ASBidTypes />} />

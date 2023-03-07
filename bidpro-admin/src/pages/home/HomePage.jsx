@@ -1,43 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Header } from "./../../components/Header/Header";
+import { AdministrationView } from "./../../components/AdministrationView/AdministrationView";
+import { VersionView } from "../../components/VersionView/VersionView";
+import { Footer } from "../../components/Footer/Footer";
 
-export const HomePage = () => {
-  return (
-    <div className="App">
-      <h1>My CIS117 BidPro Admin App</h1>
-      <ul>
-        <li>
-          <Link to="/american-airlines/bidtypes">
-            American Airlines - BidTypes
-          </Link>
-        </li>
-        <li>
-          <Link to="/american-airlines/pilots">American Airlines - Pilots</Link>
-        </li>
-        <li>
-          <Link to="/alaska-airlines/bidtypes">Alaska Airlines - BidTypes</Link>
-        </li>
-        <li>
-          <Link to="/alaska-airlines/pilots">Alaska Airlines - Pilots</Link>
-        </li>
-        <li>
-          <Link to="/frontier-airlines/bidtypes">
-            Frontier Airlines - BidTypes
-          </Link>
-        </li>
-        <li>
-          <Link to="/frontier-airlines/pilots">Frontier Airlines - Pilots</Link>
-        </li>
-        <li>
-          <Link to="/ups/bidtypes">UPS - BidTypes</Link>
-        </li>
-      </ul>
-      <h2>Examples</h2>
-      <ul>
-        <li>
-          <Link to="/example/forms">Forms</Link>
-        </li>
-      </ul>
+/**
+ *
+ * Structural component that displays the home page.
+ *
+ */
+
+const HomePage = () => (
+  <div>
+    <Header />
+    <div className="jumbotron d-flex align-items-stretch mx-5 pt-2 pb-0">
+      <AdministrationView name="Lillie McAlister" />
+      <VersionView current="1.0.0" />
     </div>
-  );
-};
+    <footer>
+      <Footer />
+    </footer>
+  </div>
+);
+
+export default HomePage;
