@@ -1,3 +1,4 @@
+import Header from "./components/Header";
 import HomePage from "./pages/home/index";
 import AABidTypes from "./pages/american-airlines/bidtypes";
 import AAPilots from "./pages/american-airlines/pilots";
@@ -7,12 +8,14 @@ import FABidTypes from "./pages/frontier-airlines/bidtypes";
 import FAPilots from "./pages/frontier-airlines/pilots";
 import UPBidTypes from "./pages/ups/bidtypes";
 import Forms from "./pages/examples/forms";
+import Footer from "./components/Footer";
 
 import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/american-airlines/bidtypes" element={<AABidTypes />} />
@@ -24,6 +27,7 @@ function App() {
         <Route path="/ups/bidtypes" element={<UPBidTypes />} />
         <Route path="/example/forms" element={<Forms />} />
       </Routes>
+      <Footer />
     </>
   );
 }
