@@ -1,6 +1,8 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../src/App.css";
 
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
