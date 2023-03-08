@@ -1,39 +1,34 @@
 import React from "react";
 import { NavBar } from "./NavBar";
+import { BrowserRouter as Router } from "react-router-dom";
 
 export default {
   title: "Components/NavBar",
   component: NavBar,
 };
 
-const Template = (args) => <NavBar {...args} />;
-export const ExampleNavBar = Template.bind({});
+const Template = (args) => (
+  <Router>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-light py-0">
+      <div className="container-fluid ps-0">
+        <NavBar {...args} />
+      </div>
+    </nav>
+  </Router>
+);
 
-ExampleNavBar.args = {
-  menus: [
+export const Default = Template.bind({});
+Default.args = {
+  dropDowns: [
     {
-      id: "1",
       airlineName: "American Airlines",
       bidTypesPath: "/american-airlines/bidtypes",
-      pilotsPath: "american-airlines/pilots",
+      pilotsPath: "/american-airlines/pilots",
     },
     {
-      id: "2",
       airlineName: "Alaska Airlines",
       bidTypesPath: "/alaska-airlines/bidtypes",
-      pilotsPath: "alaska-airlines/pilots",
-    },
-    {
-      id: "3",
-      airlineName: "Frontier Airlines",
-      bidTypesPath: "/frontier-airlines/bidtypes",
-      pilotsPath: "frontier-airlines/pilots",
-    },
-    {
-      id: "4",
-      airlineName: "UPS",
-      bidTypesPath: "/ups/bidtypes",
-      pilotsPath: "ups/pilots",
+      pilotsPath: "/alaska-airlines/pilots",
     },
   ],
 };

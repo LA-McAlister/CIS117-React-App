@@ -4,3 +4,7 @@
   background-color: var(--bs-light);
   border-radius: 0.3rem;
 }
+
+.bg-light {
+  background-color: #83a4c4 !important;
+}
