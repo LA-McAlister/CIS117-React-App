@@ -8,3 +8,9 @@
 .bg-light {
   background-color: #83a4c4 !important;
 }
+
+.bid-type {
+  background-color: rgb(147,179,208) !important;
+  border-color: rgb(147,179,208) !important;
+
+}

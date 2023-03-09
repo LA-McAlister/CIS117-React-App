@@ -1,5 +1,6 @@
 import React from "react";
 import { NavBarDropDown } from "./../NavBarDropDown/NavBarDropDown";
+import PropTypes from "prop-types";
 
 export const NavBar = ({ dropDowns }) => {
   return (
@@ -14,4 +15,8 @@ export const NavBar = ({ dropDowns }) => {
       </ul>
     </div>
   );
+};
+
+NavBar.defaultProps = {
+  navBarDropDown: [{}],
 };
