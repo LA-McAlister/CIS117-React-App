@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 
+import { useSelector, useDispatch } from "react-redux";
+import { selectCount, increment, decrement } from "../../redux/counterSlice";
+
 export const SimpleCounter = () => {
-  const [count, setCount] = useState(0);
+  //added from slice
+  const initialCount = useSelector(selectCount);
+  //added from slice
+  const dispatch = useDispatch();
+  const [count, setCount] = useState(initialCount);
 
   /**
    * JavaScript Code
    */
   const addNum = () => {
+    dispatch(increment());
     setCount(count + 1);
   };
 
   const subtractNum = () => {
+    dispatch(decrement());
     setCount(count - 1);
   };
 
