@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 
+import { useSelector } from "react-redux";
+import { selectCount } from "../../redux/counterSlice";
+
 export const HelloNameInputOutput = () => {
   /**
    * JavaScript Code
    */
+  const count = useSelector(selectCount);
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -46,6 +50,7 @@ export const HelloNameInputOutput = () => {
         <button onClick={clearName}>Clear</button>
       </div>
       <p>{helloNameMessage}</p>
+      <h1>Counter: {count}</h1>
     </>
   );
 };
