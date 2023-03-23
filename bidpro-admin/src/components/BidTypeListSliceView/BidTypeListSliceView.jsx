@@ -1,7 +1,14 @@
 import React from "react";
 import { BidTypeSliceView } from "../BidTypeSliceView/BidTypeSliceView";
+import { useSelector } from "react-redux";
+import { selectBidTypes } from "../../redux/bidTypeSlice";
 
-export const BidTypeListSliceView = ({ bidTypes }) => {
+export const BidTypeListSliceView = ({ airline, bidTypes }) => {
+  const allBidTypes = useSelector(selectBidTypes);
+  if (allBidTypes && allBidTypes.length > 0) {
+    bidTypes = allBidTypes.filter((bidType) => bidType.airline === airline);
+  }
+
   return (
     <div className="table-responsive">
       <section className="sliceTable flex-table">

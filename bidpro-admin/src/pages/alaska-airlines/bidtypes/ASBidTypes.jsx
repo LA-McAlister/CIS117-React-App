@@ -6,7 +6,7 @@ export const ASBidTypes = () => {
   return (
     <div className="container">
       <h1>Alaska Airlines - BidTypes</h1>
-      <BidTypeListSliceView bidTypes={[]} />
+      <BidTypeListSliceView airline="AS" bidTypes={[]} />
       <Link to="/">Home</Link>
     </div>
   );

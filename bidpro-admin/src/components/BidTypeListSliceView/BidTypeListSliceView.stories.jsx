@@ -1,12 +1,28 @@
 import React from "react";
 import { BidTypeListSliceView } from "./BidTypeListSliceView";
+import { Provider } from "react-redux";
 
 export default {
   title: "Components/BidTypeListSliceView",
   component: BidTypeListSliceView,
 };
 
-const Template = (args) => <BidTypeListSliceView {...args} />;
+//Mock up our Redux store
+
+const store = {
+  getState: () => {
+    return {
+      bidTypes: [],
+    };
+  },
+  subscribe: () => 0,
+};
+
+const Template = (args) => (
+  <Provider store={store}>
+    <BidTypeListSliceView {...args} />
+  </Provider>
+);
 export const Default = Template.bind({});
 Default.args = {
   bidTypes: [
