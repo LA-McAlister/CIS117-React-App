@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 export const ContactInput = ({ addContact }) => {
   /**
@@ -62,4 +63,13 @@ export const ContactInput = ({ addContact }) => {
       </form>
     </div>
   );
+};
+
+ContactInput.propTypes = {
+  firstName: PropTypes.number,
+  lastName: PropTypes.string,
+  email: PropTypes.string,
+  areacode: PropTypes.string,
+  prefix: PropTypes.string,
+  suffix: PropTypes.string,
 };

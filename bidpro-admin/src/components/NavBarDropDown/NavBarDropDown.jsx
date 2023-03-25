@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export const NavBarDropDown = ({ airlineName, bidTypesPath, pilotsPath }) => (
   <li className="nav-item dropdown d-inline-block">
@@ -31,3 +32,9 @@ export const NavBarDropDown = ({ airlineName, bidTypesPath, pilotsPath }) => (
     </ul>
   </li>
 );
+
+NavBarDropDown.propTypes = {
+  bidTypesPath: PropTypes.number,
+  pilotsPath: PropTypes.string,
+  airlineName: PropTypes.string,
+};

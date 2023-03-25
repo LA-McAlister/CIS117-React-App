@@ -1,5 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
+import PropTypes from "prop-types";
 
 const validate = (values) => {
   const errors = {};
@@ -101,4 +102,13 @@ export const ContactValidationInput = ({ addContact }) => {
       </form>
     </div>
   );
+};
+
+ContactValidationInput.propTypes = {
+  firstName: PropTypes.number,
+  lastName: PropTypes.string,
+  email: PropTypes.string,
+  areacode: PropTypes.string,
+  prefix: PropTypes.string,
+  suffix: PropTypes.string,
 };
