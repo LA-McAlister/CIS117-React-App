@@ -34,3 +34,33 @@
    background-color: #83a4c4;
    color: white;
 }
+
+.mathRow {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.mathColumn {
+  width: calc(100% / 3);
+  text-align: center;
+  padding: 1px;
+}
+
+.mathTable {
+  min-width: 500px;
+}
+
+.jumboColumn {
+  width: calc(100% / 1);
+  text-align: center;
+  padding: 1px;
+  background-color: var(--bs-light);
+}
+
+
+.simpleRow {
+  display: flex;
+  align-items: center;
+  width: calc(100% / 1);
+}
