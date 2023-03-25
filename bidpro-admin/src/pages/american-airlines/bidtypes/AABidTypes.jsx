@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { HelloNameInputOutput } from "../../../components/HelloNameInputOutput/HelloNameInputOutput";
+import { BidTypeListSliceView } from "../../../components/BidTypeListSliceView/BidTypeListSliceView";
 
 export const AABidTypes = () => {
   return (
-    <div>
+    <div className="container">
       <h1>American Airlines - BidTypes</h1>
-      <HelloNameInputOutput />
+      <BidTypeListSliceView airline="AA" bidTypes={[]} />
       <Link to="/">Home</Link>
     </div>
   );

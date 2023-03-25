@@ -12,5 +12,25 @@
 .bid-type {
   background-color: rgb(147,179,208) !important;
   border-color: rgb(147,179,208) !important;
+}
 
+.sliceRow {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.sliceColumn {
+  width: calc(100% / 6);
+  text-align: center;
+  padding: 1px;
+}
+
+.sliceTable {
+  min-width: 800px;
+}
+
+.sliceHeader {
+   background-color: #83a4c4;
+   color: white;
 }
