@@ -4,11 +4,9 @@ import { SimpleMathCalculator } from "../../../components/SimpleMathCalculator/S
 
 export const FAPilots = () => {
   return (
-    <div className="container">
-      <div className="px-3">
-        <div className="px-5">
-          <h1 className="px-5">Simple Math Calculator</h1>
-        </div>
+    <div className="container justify-center">
+      <div className="simpleRow flex-row justify-content-center">
+        <h1 className=" px-5">Simple Math Calculator</h1>
       </div>
       <SimpleMathCalculator />
       <Link to="/">Home</Link>
